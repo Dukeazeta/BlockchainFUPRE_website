@@ -176,7 +176,7 @@ const Navbar: React.FC<NavbarProps> = ({ navRef, menuItemsRef }) => {
 
         {/* Menu Items */}
         <div ref={mobileMenuItemsRef} className="flex-1 flex flex-col justify-center px-6 gap-6">
-          {menuItems.map((item, index) => (
+          {menuItems.map((item) => (
             <div
               key={item}
               className="group cursor-pointer opacity-100"

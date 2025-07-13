@@ -89,7 +89,7 @@ const WhoWeAreSection: React.FC = () => {
             ref={subtitleRef}
             className="text-[#F8556D] text-sm font-medium tracking-wider uppercase mb-6"
           >
-            Blockchain FUPRE's Mission And Goals.
+            Blockchain FUPRE&apos;s Mission And Goals.
           </p>
 
           {/* Main Title */}

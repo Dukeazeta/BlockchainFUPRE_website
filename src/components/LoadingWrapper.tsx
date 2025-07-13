@@ -14,7 +14,7 @@ const LoadingWrapper: React.FC<LoadingWrapperProps> = ({
   loadingDuration = 3000 
 }) => {
   const [isLoading, setIsLoading] = useState(true);
-  const [showContent, setShowContent] = useState(false);
+  const [, setShowContent] = useState(false);
   const loaderRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
