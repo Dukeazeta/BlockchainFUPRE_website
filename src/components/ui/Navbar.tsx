@@ -50,20 +50,26 @@ const Navbar: React.FC<NavbarProps> = ({ navRef, menuItemsRef }) => {
         }, "-=0.1");
 
         // Hamburger to X animation
-        gsap.to(hamburgerRef.current?.children[0], {
-          rotation: 45,
-          y: 6,
-          duration: 0.3
-        });
-        gsap.to(hamburgerRef.current?.children[1], {
-          opacity: 0,
-          duration: 0.2
-        });
-        gsap.to(hamburgerRef.current?.children[2], {
-          rotation: -45,
-          y: -6,
-          duration: 0.3
-        });
+        if (hamburgerRef.current?.children[0]) {
+          gsap.to(hamburgerRef.current.children[0], {
+            rotation: 45,
+            y: 6,
+            duration: 0.3
+          });
+        }
+        if (hamburgerRef.current?.children[1]) {
+          gsap.to(hamburgerRef.current.children[1], {
+            opacity: 0,
+            duration: 0.2
+          });
+        }
+        if (hamburgerRef.current?.children[2]) {
+          gsap.to(hamburgerRef.current.children[2], {
+            rotation: -45,
+            y: -6,
+            duration: 0.3
+          });
+        }
 
       } else {
         // Close animation
@@ -82,21 +88,27 @@ const Navbar: React.FC<NavbarProps> = ({ navRef, menuItemsRef }) => {
         }, "-=0.2");
 
         // X to hamburger animation
-        gsap.to(hamburgerRef.current?.children[0], {
-          rotation: 0,
-          y: 0,
-          duration: 0.3
-        });
-        gsap.to(hamburgerRef.current?.children[1], {
-          opacity: 1,
-          duration: 0.2,
-          delay: 0.1
-        });
-        gsap.to(hamburgerRef.current?.children[2], {
-          rotation: 0,
-          y: 0,
-          duration: 0.3
-        });
+        if (hamburgerRef.current?.children[0]) {
+          gsap.to(hamburgerRef.current.children[0], {
+            rotation: 0,
+            y: 0,
+            duration: 0.3
+          });
+        }
+        if (hamburgerRef.current?.children[1]) {
+          gsap.to(hamburgerRef.current.children[1], {
+            opacity: 1,
+            duration: 0.2,
+            delay: 0.1
+          });
+        }
+        if (hamburgerRef.current?.children[2]) {
+          gsap.to(hamburgerRef.current.children[2], {
+            rotation: 0,
+            y: 0,
+            duration: 0.3
+          });
+        }
       }
     });
 
